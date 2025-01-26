@@ -53,19 +53,23 @@ main {
   }
 }
 
+$on-laptop: 1024px; // Example definition, adjust as needed
+
 #nav-toggle {
-  @media screen and (min-width: $on-laptop + 1) {
+  @media screen and (min-width: #{($on-laptop + 1)}) {
     display: none;
   }
+}
 
-  --nav-toggle: var(--gray700);
+#nav-toggle {
+  --nav-toggle: var(--gray700); // Declare the variable at the top
   all: unset;
   cursor: pointer;
   padding-top: 8px;
   margin: auto 0 0 auto;
 
   &:focus, &:hover, &:active {
-    --nav-toggle: var(--secondary500);
+    --nav-toggle: var(--secondary500); // Change the variable's value on focus/hover/active
   }
 }
 
