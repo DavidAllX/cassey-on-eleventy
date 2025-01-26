@@ -1,3 +1,5 @@
+$on-laptop: 1024px; // Breakpoint definition, adjust as needed
+
 body {
   min-height: 100vh;
   display: flex;
@@ -8,9 +10,9 @@ main {
   flex: 1;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start; /* Align items in Main Axis */
-  align-items: stretch; /* Align items in Cross Axis */
-  align-content: stretch; /* Extra space in Cross Axis */
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
   padding: $spacing-unit 0;
 }
 
@@ -19,6 +21,10 @@ main {
   border-bottom: 8px solid var(--gray300);
   min-height: 56px;
   background-color: var(--gray100);
+  display: flex; // Use flexbox for header layout
+  flex-direction: column; // Stack items vertically
+  align-items: center; // Center items horizontally
+  padding: 20px 0; // Add padding for breathing room
 
   a, a:hover, a:focus, a:visited {
     text-decoration: none;
@@ -36,77 +42,76 @@ main {
   .wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center; // Center align items vertically
+    width: 100%; // Ensure wrapper takes full width
 
     @media screen and (max-width: $on-laptop) {
       display: grid;
-      grid-template-columns: max-content 1fr;
+      grid-template-columns: 1fr auto; // Space for title and hamburger
+      justify-items: center; // Center items within the grid
       margin: 0;
-      max-width: unset;
       width: 100%;
     }
+  }
 
-    @media screen and (max-width: 1028px) {
-      width: calc(100vw - 16px);
-      padding: 0 8px;
+  /* Center the site-title on smaller screens */
+  .site-title {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0.5px;
+    margin: 0; // Remove bottom margin
+    font-family: "Reenie Beanie", serif; // Ensure the font is set
+
+    @media screen and (max-width: $on-laptop) {
+      text-align: center; // Center the text
+      width: 100%; // Make it take full width
+      margin: 10px 0; // Add breathing room above and below
     }
   }
 }
 
-$on-laptop: 1024px; // Example definition, adjust as needed
-
+/* Hamburger Menu Toggle */
 #nav-toggle {
-  @media screen and (min-width: #{($on-laptop + 1)}) {
-    display: none;
-  }
-}
-
-#nav-toggle {
-  --nav-toggle: var(--gray700); // Declare the variable at the top
-  all: unset;
-  cursor: pointer;
-  padding-top: 8px;
-  margin: auto 0 0 auto;
+  --nav-toggle: var(--gray700);
+  all: unset; 
+  cursor: pointer; 
+  padding-top: 8px; 
+  margin-top: 0; // Align vertically with site-title
 
   &:focus, &:hover, &:active {
-    --nav-toggle: var(--secondary500); // Change the variable's value on focus/hover/active
+    --nav-toggle: var(--secondary500);
+  }
+
+  @media screen and (min-width: #{$on-laptop}) {
+    display: none; // Hide on larger screens
   }
 }
 
 .nav {
   @media screen and (max-width: $on-laptop) {
-    display: none;
+    display: none; // Hide navigation on mobile
   }
 }
 
 .nav.visible {
-  display: block !important;
+  display: block !important; // Show when toggled
 }
 
-.site-title {
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 56px;
-  letter-spacing: 0.5px;
-  margin-bottom: 0;
-  font-family: "Reenie Beanie", serif;
-  font-style: normal;
-  text-transform: none;
-}
-
+/* Site Navigation Styles */
 .site-nav {
   line-height: 56px;
   font-size: 20px;
 
   .menu-icon {
-    display: none;
+    display: none; // Hide menu icon by default
   }
 
   .page-link {
     line-height: $base-line-height;
 
     &:not(:last-child) {
-      margin-right: 20px; /* Gaps between nav items */
+      margin-right: 20px; // Gaps between nav items
     }
   }
 
