@@ -1351,7 +1351,7 @@ what causes this? - .CodeMirror.cm-spell-error setting red a squiggly line as ba
 /* some heading in settings menu */
 .setting-item-heading .setting-item-name,
 .vertical-tab-header-group-title {
-  text-transform: uppercase;
+  text-transform: none;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;

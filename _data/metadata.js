@@ -7,36 +7,36 @@ module.exports = async function () {
       : process.env.URL;
 
   let social_image = await imgUrlShortcode(
-    "raw_img/cassey-dev.png",
+    "raw_img/davidall-com.png",
     [1600],
     ["png"]
   );
   social_image = site + social_image;
 
   return {
-    title: "Cassey Lottman",
-    url: "https://cassey.dev/",
-    domain: "https://www.cassey.dev",
+    title: "David All",
+    url: "https://davidall.com/",
+    domain: "https://davidall.com",
     baseurl: site,
     description:
-      'Cassey is a software developer who likes building for the Web most of all. She [ran for City Council](https://web.archive.org/web/20190809135734/http://casseyforcouncil.com/) in Lincoln, Nebraska.',
-    social_description: "One person is typing.",
+      'David is a storyteller and poet known for organizing events across America and his podcast, [Belly of the Beast Life Stories](https://creators.spotify.com/pod/show/davidall).',
+    social_description: "With no small commitment.",
     feed: {
-      subtitle: "One person is typing.",
+      subtitle: "With no small commitment.",
       filename: "feed.xml",
       path: "/feed/feed.xml",
-      url: "https://cassey.dev/feed/feed.xml",
-      id: "https://cassey.dev/",
+      url: "https://davidall.com/feed/feed.xml",
+      id: "https://davidall.com/",
     },
     author: {
-      name: "Cassey Lottman",
-      site: "https://cassey.dev",
-      github_username: "clottman",
-      til: "https://cassey.dev/til",
+      name: "David All",
+      site: "https://davidall.com",
+      github_username: "DavidAllX",
+      //til: "https://cassey.dev/til",
     },
     favicon: "/img/favicon.ico",
     social_image: social_image,
-    social_image_alt: "cassey.dev",
+    social_image_alt: "davidall.com",
     social_image_height: 900,
     social_image_width: 1600,
     twitter_card_style: "summary_large_image",

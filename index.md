@@ -4,9 +4,9 @@ wrapperClass: home
 eleventyExcludeFromCollections: true
 ---
 
-<p class="mainGreeting">Hello, and welcome.</p>
+<p class="mainGreeting">Hey there.</p>
 
-<p class="secondaryGreeting">Here you'll find links to a few things I've worked on.</p>
+<p class="secondaryGreeting">This is a space for stories, poems, ideas and principles.</p>
 
 ## Code
 

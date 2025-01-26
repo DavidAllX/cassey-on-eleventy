@@ -1,0 +1,126 @@
+/* Dark Mode Styles for Code Highlighting Inspired by MoMA */
+code[class*="language-"], 
+pre[class*="language-"] {
+    font-size: 14px;
+    line-height: 1.5;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    tab-size: 2;
+    background: #1c1c1e; /* Slightly lighter dark background */
+    color: #e0e0e0; /* Light gray text for readability */
+}
+
+pre[class*="language-"] {
+    padding: 1.5em;
+    margin: 0.5em 0;
+    overflow: auto;
+    border-radius: 4px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+:not(pre) > code[class*="language-"] {
+    padding: 0.2em;
+    border-radius: 0.3em;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background behind inline code */
+}
+
+.token.comment, 
+.token.prolog, 
+.token.doctype, 
+.token.cdata {
+    color: #a6a6a6; /* Lighter gray for comments */
+}
+
+.token.punctuation {
+    color: #e0e0e0;
+}
+
+.token.namespace {
+    opacity: 0.7;
+}
+
+.token.operator, 
+.token.boolean, 
+.token.number {
+    color: #ffcc00; /* Bright yellow for operators and numbers */
+}
+
+.token.property {
+    color: #f1c40f; /* Soft gold for properties */
+}
+
+.token.tag {
+    color: #00bcd4; /* Cyan for tags */
+}
+
+.token.string {
+    color: #2ecc71; /* Green for strings */
+}
+
+.token.selector {
+    color: #9b59b6; /* Purple for selectors */
+}
+
+.token.attr-name {
+    color: #ffcc00; /* Bright yellow for attribute names */
+}
+
+.token.entity, 
+.token.url, 
+.language-css .token.string, 
+.style .token.string {
+    color: #2ecc71; /* Green for entities */
+}
+
+.token.attr-value, 
+.token.keyword, 
+.token.control, 
+.token.directive, 
+.token.unit {
+    color: #1abc9c; /* Teal for attribute values */
+}
+
+.token.statement, 
+.token.regex, 
+.token.atrule {
+    color: #2ecc71; /* Green for statements */
+}
+
+.token.placeholder, 
+.token.variable {
+    color: #00bcd4; /* Cyan for placeholders and variables */
+}
+
+.token.deleted {
+    text-decoration: line-through;
+    color: #e74c3c; /* Red for deleted text */
+}
+
+.token.inserted {
+    border-bottom: 1px dotted #f9f9f9; /* Light dotted line for inserted text */
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.important, 
+.token.bold {
+    font-weight: bold;
+}
+
+.token.important {
+    color: #e67e22; /* Orange for important tokens */
+}
+
+.token.entity {
+    cursor: help;
+}
+
+pre > code.highlight {
+    outline: 0.4em solid #e67e22; /* Highlighted border */
+    outline-offset: 0.4em;
+}

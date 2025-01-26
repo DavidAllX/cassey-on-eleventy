@@ -1,0 +1,21 @@
+# Query: main.css
+# ContextLines: 1
+
+5 results - 3 files
+
+_includes/layouts/base.njk:
+  10      <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+  11:     <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
+  12      <link rel="alternate" href="{{ metadata.feed.url }}" type="application/rss+xml" title="{{ metadata.title }}">
+
+_site/abundance/index.html:
+  10      <link rel="stylesheet" href="/css/index.css">
+  11:     <link rel="stylesheet" href="/css/main.css">
+  12      <link rel="alternate" href="https://davidall.com/feed/feed.xml" type="application/rss+xml" title="David All">
+
+config/buildCss.js:
+  17    postcss([autoprefixer])
+  18:     .process(css, { from: "main.css", to: "css/main.css" })
+  19      .then((result) => {
+  20:       fs.outputFile("_site/css/main.css", result.css, (err) => {
+  21          if (err) throw err;
