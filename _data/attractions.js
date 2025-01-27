@@ -1,22 +1,22 @@
 module.exports = [
   {
-    filename: "raw_img/attractions/beef_king_of_meats.jpg",
-    alt: "a large statue of a black bull with a pink blanket on it that reads 'BEEF KING OF MEATS' sits on a pedestal that says Silver Spur Feeders, against an empty crop field",
+    filename: "raw_img/attractions/LSC-1809Tastings.jpg",
+    alt: "David created 1809 Tasting series for Laurel Spring Cidery in Fall 2024 to immerse the community between the log house and barn both built in 1809",
 
     rowSpan: 1,
     colSpan: 1,
-    width: "300",
-  },
-  {
-    filename: "raw_img/attractions/carhenge copy.jpeg",
-    alt: "a large replica of Stonehenge made of grey-pained vintage cars against a sunset",
-    rowSpan: 1,
-    colSpan: 2,
     width: "800",
   },
   {
-    filename: "raw_img/attractions/cassey_toilets.jpg",
-    alt: "Cassey, with long blonde hair, stands in a grassy lot next to 3 toilets painted red, white, and blue respectively. In the background is a semi-circle of more old toilets, a mailbox, a sign that says 'MEN WORKING', and a life-size rusty metal yeti figure.",
+    filename: "raw_img/attractions/DavidAllPours.jpg",
+    alt: "Pouring an American Basque style heritage craft cider at 1809 Tastings",
+    rowSpan: 2,
+    colSpan: 2,
+    width: "500",
+  },
+  {
+    filename: "raw_img/attractions/HealthinAmerica.png",
+    alt: "David created 'Health in America' a series of storytelling events at the National Press Club in Washington, DC featuring changemakers",
     rowSpan: 1,
     colSpan: 2,
     width: "600",
