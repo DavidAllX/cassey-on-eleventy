@@ -15,4 +15,4 @@ I created [Belly of the Beast Life Stories](https://creators.spotify.com/pod/sho
 
 For all else, check out my [Linktree](https://linktr.ee/davidall).
 
-Want to connect? Email *david AT this domain*
+Want to connect? Email *david AT davidall.com*

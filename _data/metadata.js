@@ -19,7 +19,7 @@ module.exports = async function () {
     domain: "https://davidall.com",
     baseurl: site,
     description:
-      'David is a storyteller and poet known for organizing events across America and his podcast, [Belly of the Beast Life Stories](https://creators.spotify.com/pod/show/davidall).',
+      'David is an American storyteller and poet based in Spring Mills, Pennsylvania. Among other things, he is known for organizing events across America and his podcast, [Belly of the Beast Life Stories](https://creators.spotify.com/pod/show/davidall).',
     social_description: "With no small commitment.",
     feed: {
       subtitle: "With no small commitment.",
@@ -34,7 +34,7 @@ module.exports = async function () {
       github_username: "DavidAllX",
       //til: "https://cassey.dev/til",
     },
-    favicon: "/img/favicon.ico",
+    favicon: "/img/jackson.png",
     social_image: social_image,
     social_image_alt: "davidall.com",
     social_image_height: 900,

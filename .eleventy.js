@@ -1,8 +1,8 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const eleventyAutoCacheBuster = require("eleventy-auto-cache-buster");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const buildCss = require("./config/buildCss");
-const markdown = require("./config/markdown");
+const buildCss = require("./config/buildCss.js");
+const markdown = require("./config/markdown.js");
 require("dotenv").config();
 
 const {
@@ -10,70 +10,82 @@ const {
   rssCollection,
   tilTagsCollection,
   sortedNavCollection,
-} = require("./config/collections");
+} = require("./config/collections/index.js");
 
 const {
   stripPs,
   classifyTagFilter,
   readableDateFilter,
-  htmlDateStringFilter,
   headFilter,
   markdownifyFilter,
-} = require("./config/filters");
+} = require("./config/filters/index.js");
+
 const includeFilter = require("./config/filters/include.js");
-const { imgShortcode, imageShortcode, imgFullUrl } = require("./config/shortcodes/image");
+const { imgShortcode, imageShortcode, imgFullUrl } = require("./config/shortcodes/image.js");
 
 module.exports = function (eleventyConfig) {
+  // Add plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(eleventyAutoCacheBuster);
   
+  // Enable deep merging of data
   eleventyConfig.setDataDeepMerge(true);
 
+  // Layout aliases
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
 
+  // Add filters
   eleventyConfig.addFilter("markdownify", markdownifyFilter);
   eleventyConfig.addFilter("stripPs", stripPs);
   eleventyConfig.addFilter("readableDate", readableDateFilter);
   eleventyConfig.addFilter("include", includeFilter);
 
-  // for use with the log filter when you want to dump an object to string on the page
+  // Updated date filter
+  eleventyConfig.addFilter("htmlDateString", (date) => {
+    const formattedDate = new Date(date);
+    if (isNaN(formattedDate)) {
+      console.error(`Invalid date: ${date}`); // Log any invalid dates
+      return ""; // Return empty string if date is invalid
+    }
+    return formattedDate.toISOString().split("T")[0]; // "YYYY-MM-DD"
+  });
+
+  // Utility filters
   eleventyConfig.addFilter("stringifyObject", (obj) => {
     return JSON.stringify(obj);
   });
-
-  // replaces whitespace with _ and removes slashes
   eleventyConfig.addFilter("classifyTag", classifyTagFilter);
-
-  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-  eleventyConfig.addFilter("htmlDateString", htmlDateStringFilter);
-
-  // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", headFilter);
 
+  // Passthrough copies
   ["img", "css", "files", "admin"].forEach((path) =>
     eleventyConfig.addPassthroughCopy(path)
   );
 
+  // Set Markdown library
   eleventyConfig.setLibrary("md", markdown);
 
+  // Collections
   eleventyConfig.addCollection("sortedNav", sortedNavCollection);
-  eleventyConfig.addCollection("tagList", require("./config/getTagList"));
+  eleventyConfig.addCollection("tagList", require("./config/getTagList.js"));
   eleventyConfig.addCollection("til", tilCollection);
   eleventyConfig.addCollection("rss", rssCollection);
   eleventyConfig.addCollection("tilTags", tilTagsCollection);
 
+  // Shortcodes
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   eleventyConfig.addNunjucksAsyncShortcode("img", imgShortcode);
   eleventyConfig.addNunjucksAsyncShortcode("imgFullUrl", imgFullUrl);
 
-  // compile sass and optimize it https://www.d-hagemeier.com/en/articles/sass-compile-11ty/
+  // Compile CSS
   eleventyConfig.on("beforeBuild", buildCss);
 
-  // trigger a rebuild if sass changes
+  // Watch for Sass changes
   eleventyConfig.addWatchTarget("_sass/");
 
+  // Return configuration
   return {
     templateFormats: ["md", "njk", "html", "liquid", "hbs"],
     pathPrefix: "/",

@@ -1,128 +1,55 @@
 module.exports = [
   {
-    name: "Explaining My Depression to My Mother",
-    author: "Sabrina Benaim",
-    url: "https://youtu.be/aqu4ezLQEUA",
+    name: "Host Reel Over the Years",
+    author: "David All",
+    url: "https://www.youtube.com/watch?v=Pj1zlXBrX9Y",
     slowdownUrl: "",
     video: true
   },
   {
-    name: "Shrinking Women",
-    author: "Lily Myers",
-    url: "https://youtu.be/zQucWXWXp3k",
+    name: "Hummingbird Routine in 90 Seconds",
+    author: "David All",
+    url: "https://www.youtube.com/watch?v=9U27F7zB2HM",
     video: true
   },
   {
-    name: "We Lived Happily During The War",
-    author: "Ilya Kaminsky",
+    name: "AWAKΞN: A Poem by David All for Changemakers",
+    author: "David All",
     url:
-      "https://www.poetryfoundation.org/poems/91413/we-lived-happily-during-the-war",
-    slowdownUrl:
-      "https://www.slowdownshow.org/episode/2019/04/26/110-we-lived-happily-during-the-war"
+      "https://www.youtube.com/watch?v=FEuDilroXK8",
+      video: true
   },
   {
-    name: "A Small Needful Fact",
-    author: "Ross Gay",
-    url: "https://poets.org/poem/small-needful-fact",
-    slowdownUrl:
-      "https://www.slowdownshow.org/episode/2019/07/10/163-a-small-needful-fact"
+    name: "AWAKΞN Process: Writing a Poem",
+    author: "David All",
+    url: "https://www.youtube.com/watch?v=R6FcmYBaS3w",
+    video: true
   },
   {
-    name: "Small Kindnesses",
-    author: "Danusha Laméris",
+    name: "David versus the Opioid Epidemic",
+    author: "David All",
     url:
-      "https://voxpopulisphere.com/2019/08/11/danusha-lameris-small-kindnesses/"
+      "https://www.youtube.com/watch?v=_ye7-StkspA",
+    video: true
   },
   {
-    name: "Using a Hula Hoop Can Get You Abducted by Aliens",
-    author: "Matthea Harvey",
+    name: "LC Johnson Zora's House Founder at Test City Storytellers",
+    author: "LC Johnson",
     url:
-      "https://www.pbs.org/newshour/arts/weekly-poem-using-a-hula-hoop-can-get-you-abducted-by-aliens",
-    slowdownUrl:
-      "https://www.slowdownshow.org/episode/2019/08/01/179-using-a-hula-hoop-can-get-you-abducted-by-aliens"
-  },
-  {
-    name: "Pocket-Sized Feminism",
-    author: "Blythe Baird",
-    url: "https://youtu.be/vT74LH0W8ig",
+      "https://www.youtube.com/watch?v=q5yyVMIuaVA",
     video: true
   },
   {
-    name: "Alcestis on the Poetry Circuit",
-    author: "Erica Jong",
-    url: "https://www.poeticous.com/erica-jong/alcestis-on-the-poetry-circuit"
-  },
-  {
-    name: "Habitation",
-    author: "Margaret Atwood",
-    url: "https://www.poeticous.com/margaret-atwood/habitation"
-  },
-  {
-    name: "Immigrant Can't Write Poetry",
-    author: "Wang Ping",
-    url: "https://poets.org/poem/immigrant-cant-write-poetry",
-    slowdownUrl:
-      "https://www.slowdownshow.org/episode/2019/07/26/175-immigrant-cant-write-poetry"
-  },
-  {
-    name: "Ozymandias",
-    author: "Percy Bysshe Shelley",
-    url: "https://www.poetryfoundation.org/poems/46565/ozymandias",
-    slowdownUrl:
-      "https://www.slowdownshow.org/episode/2019/06/11/142-ozymandias"
-  },
-  {
-    name: "Indigo",
-    author: "Ellen Bass",
-    url: "https://poets.org/poem/indigo",
-    slowdownUrl: ""
-  },
-  {
-    name: "If I Was Your God",
-    author: "Dave McAlinden",
-    url: "https://youtu.be/LZhkZoG4vOs",
+    name: "Test City Storytellers: Full Stream",
+    author: "David All",
+    url: "https://www.youtube.com/watch?v=1VD2kT5BeNc",
     video: true
   },
   {
-    name: "White Heaven",
-    author: "Jahman Hill",
-    url: "https://youtu.be/F-UYSus32bA",
+    name: "Startup Storytellers",
+    author: "David All",
+    url: "https://www.youtube.com/@startupstorytellers2280",
     video: true
   },
-  {
-    name: "Sum of Her Parts",
-    author: "Desireé Dallagiacomo",
-    url: "https://youtu.be/9H8B6JtHheQ",
-    video: true
-  },
-  {
-    name: "Black Boy Auditions For His Own Funeral",
-    author: "Gabriel Ramirez",
-    url: "https://youtu.be/ZBnQbEUKfrs",
-    video: true
-  },
-  {
-    name: "This Woman",
-    author: "Alysia Harris",
-    url: "https://youtu.be/5fUvEnocXKY",
-    video: true
-  },
-  {
-    name: "Table Games",
-    author: "Sarah Kay",
-    url: "https://youtu.be/tlcTGDRX450",
-    video: true
-  },
-  {
-    name: "The Type",
-    author: "Sarah Kay",
-    url: "https://youtu.be/qYAiYMlOCI4",
-    video: true
-  },
-  {
-    name: "Some Things You Need to Know Before Dating Me",
-    author: "Jamie Mortara",
-    url: "https://youtu.be/-BaO3iU2ICA",
-    video: true
-  }
+  
 ];
